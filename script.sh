@@ -15,17 +15,15 @@ echo "Yu yuxuan"
 
 # 1. Go to your home directory: 
 # (enter your command below)
-cd 
+cd ~
 
 # 2. from your home, creating a directory structure: new folder `scpoprogramming`, and inside that folder create folder `hw1`
 # (enter your command below)
 mkdir -p scpoprogramming/hw1
 
-
 # 3. go into that new directory, i.e. into ~/scpoprogramming/hw1
 # (enter your command below)
-cd "scpoprogramming/hw1"
-
+cd ~/scpoprogramming/hw1
 # 4. download with wget if file does not exist yet
 # if wget does not work for you, manually download from the below URL and place into `~/scpoprogramming/hw1` as `movies.dat`
 # (don't touch)
@@ -58,8 +56,6 @@ head -n 4 movies.dat
 #  5 1
 # 10 2
 # meaning we have 2 movies without any genre, 5 movies with 1, 10 with 2, etc
-cut -d '|' -f 2 movies.dat |sort| uniq -c
-
 # I want you to construct a pipeline. let's build it up from the start
 
 # 1. use the `awk` command to separt each row at the `::` delimters
@@ -67,6 +63,7 @@ cut -d '|' -f 2 movies.dat |sort| uniq -c
 # then remove the # character from the start of the line and look at the result
 # awk -F '::' '{print $3}' _filename_
 awk -F '::' '{print $3}' movies.dat
+
 # 2. observe that the `{print $3}` part prints the third field. 
 # that looks like: genre1|genre2
 # that is, there is *another* separator in this column, `|`. 
