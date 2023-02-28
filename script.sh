@@ -11,7 +11,7 @@ set -e
 # 0. Tell me who worked on this together
 echo "Justine Nayral"   # please fill in names here
 echo "Norbert Monti"
-echo "Yu yuxuan"
+echo "Yuxuan Xu"
 
 # 1. Go to your home directory: 
 # (enter your command below)
